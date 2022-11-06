@@ -1,52 +1,39 @@
+/**
+ * @generated SignedSource<<8e01b8497f1d19e0d2058c8279bd2526>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from "relay-runtime";
+import { ConcreteRequest, Mutation } from 'relay-runtime';
 export type ChangeTodoStatusInput = {
-    complete: boolean;
-    id: string;
-    userId: string;
-    clientMutationId?: string | null;
+  clientMutationId?: string | null;
+  complete: boolean;
+  id: string;
+  userId: string;
 };
-export type useChangeTodoStatusMutationVariables = {
-    input: ChangeTodoStatusInput;
+export type useChangeTodoStatusMutation$variables = {
+  input: ChangeTodoStatusInput;
 };
-export type useChangeTodoStatusMutationResponse = {
-    readonly changeTodoStatus: {
-        readonly todo: {
-            readonly id: string;
-            readonly complete: boolean;
-        };
-        readonly user: {
-            readonly id: string;
-            readonly completedCount: number;
-        };
-    } | null;
+export type useChangeTodoStatusMutation$data = {
+  readonly changeTodoStatus: {
+    readonly todo: {
+      readonly complete: boolean;
+      readonly id: string;
+    };
+    readonly user: {
+      readonly completedCount: number;
+      readonly id: string;
+    };
+  } | null;
 };
 export type useChangeTodoStatusMutation = {
-    readonly response: useChangeTodoStatusMutationResponse;
-    readonly variables: useChangeTodoStatusMutationVariables;
+  response: useChangeTodoStatusMutation$data;
+  variables: useChangeTodoStatusMutation$variables;
 };
-
-
-
-/*
-mutation useChangeTodoStatusMutation(
-  $input: ChangeTodoStatusInput!
-) {
-  changeTodoStatus(input: $input) {
-    todo {
-      id
-      complete
-    }
-    user {
-      id
-      completedCount
-    }
-  }
-}
-*/
 
 const node: ConcreteRequest = (function(){
 var v0 = [
@@ -147,5 +134,7 @@ return {
   }
 };
 })();
-(node as any).hash = '05f7e7aaf8ff89087a9891852c1efbac';
+
+(node as any).hash = "05f7e7aaf8ff89087a9891852c1efbac";
+
 export default node;

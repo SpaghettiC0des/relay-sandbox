@@ -1,43 +1,34 @@
+/**
+ * @generated SignedSource<<4c8cc83aabc8ad85ca32740df5a04829>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from "relay-runtime";
+import { ConcreteRequest, Mutation } from 'relay-runtime';
 export type RenameTodoInput = {
-    id: string;
-    text: string;
-    clientMutationId?: string | null;
+  clientMutationId?: string | null;
+  id: string;
+  text: string;
 };
-export type useRenameTodoMutationVariables = {
-    input: RenameTodoInput;
+export type useRenameTodoMutation$variables = {
+  input: RenameTodoInput;
 };
-export type useRenameTodoMutationResponse = {
-    readonly renameTodo: {
-        readonly todo: {
-            readonly id: string;
-            readonly text: string;
-        };
-    } | null;
+export type useRenameTodoMutation$data = {
+  readonly renameTodo: {
+    readonly todo: {
+      readonly id: string;
+      readonly text: string;
+    };
+  } | null;
 };
 export type useRenameTodoMutation = {
-    readonly response: useRenameTodoMutationResponse;
-    readonly variables: useRenameTodoMutationVariables;
+  response: useRenameTodoMutation$data;
+  variables: useRenameTodoMutation$variables;
 };
-
-
-
-/*
-mutation useRenameTodoMutation(
-  $input: RenameTodoInput!
-) {
-  renameTodo(input: $input) {
-    todo {
-      id
-      text
-    }
-  }
-}
-*/
 
 const node: ConcreteRequest = (function(){
 var v0 = [
@@ -118,5 +109,7 @@ return {
   }
 };
 })();
-(node as any).hash = 'bec01769317f1331bc83080e3dee1883';
+
+(node as any).hash = "bec01769317f1331bc83080e3dee1883";
+
 export default node;

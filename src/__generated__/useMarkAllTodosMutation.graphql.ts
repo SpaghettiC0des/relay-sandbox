@@ -1,51 +1,38 @@
+/**
+ * @generated SignedSource<<3c103d6fc3220e83dddefe9bece20364>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from "relay-runtime";
+import { ConcreteRequest, Mutation } from 'relay-runtime';
 export type MarkAllTodosInput = {
-    complete: boolean;
-    userId: string;
-    clientMutationId?: string | null;
+  clientMutationId?: string | null;
+  complete: boolean;
+  userId: string;
 };
-export type useMarkAllTodosMutationVariables = {
-    input: MarkAllTodosInput;
+export type useMarkAllTodosMutation$variables = {
+  input: MarkAllTodosInput;
 };
-export type useMarkAllTodosMutationResponse = {
-    readonly markAllTodos: {
-        readonly changedTodos: ReadonlyArray<{
-            readonly id: string;
-            readonly complete: boolean;
-        }> | null;
-        readonly user: {
-            readonly id: string;
-            readonly completedCount: number;
-        };
-    } | null;
+export type useMarkAllTodosMutation$data = {
+  readonly markAllTodos: {
+    readonly changedTodos: ReadonlyArray<{
+      readonly complete: boolean;
+      readonly id: string;
+    }> | null;
+    readonly user: {
+      readonly completedCount: number;
+      readonly id: string;
+    };
+  } | null;
 };
 export type useMarkAllTodosMutation = {
-    readonly response: useMarkAllTodosMutationResponse;
-    readonly variables: useMarkAllTodosMutationVariables;
+  response: useMarkAllTodosMutation$data;
+  variables: useMarkAllTodosMutation$variables;
 };
-
-
-
-/*
-mutation useMarkAllTodosMutation(
-  $input: MarkAllTodosInput!
-) {
-  markAllTodos(input: $input) {
-    changedTodos {
-      id
-      complete
-    }
-    user {
-      id
-      completedCount
-    }
-  }
-}
-*/
 
 const node: ConcreteRequest = (function(){
 var v0 = [
@@ -146,5 +133,7 @@ return {
   }
 };
 })();
-(node as any).hash = 'eddc4bb1aa1696647a8196366028df69';
+
+(node as any).hash = "eddc4bb1aa1696647a8196366028df69";
+
 export default node;

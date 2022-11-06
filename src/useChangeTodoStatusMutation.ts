@@ -1,7 +1,7 @@
 import { useMutation } from "react-relay";
 import { useCallback } from "react";
 import {
-  useChangeTodoStatusMutationResponse,
+  useChangeTodoStatusMutation$data,
   ChangeTodoStatusInput
 } from "./__generated__/useChangeTodoStatusMutation.graphql";
 
@@ -31,7 +31,7 @@ interface MutationData {
 
 function getOptimisticResponse(
   optimisticData: MutationData
-): useChangeTodoStatusMutationResponse {
+): useChangeTodoStatusMutation$data {
   return {
     changeTodoStatus: {
       todo: {

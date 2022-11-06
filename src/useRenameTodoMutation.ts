@@ -1,7 +1,7 @@
 import { useMutation } from "react-relay";
 import { useCallback } from "react";
 import {
-  useRenameTodoMutationResponse,
+  useRenameTodoMutation$data,
   RenameTodoInput
 } from "./__generated__/useRenameTodoMutation.graphql";
 
@@ -21,7 +21,7 @@ const mutation = graphql`
 function getOptimisticResponse(
   text: string,
   todoId: string
-): useRenameTodoMutationResponse {
+): useRenameTodoMutation$data {
   return {
     renameTodo: {
       todo: {

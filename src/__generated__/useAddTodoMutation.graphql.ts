@@ -1,61 +1,43 @@
+/**
+ * @generated SignedSource<<729d532c2d01f9c8c8e6b013890ccb19>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from "relay-runtime";
+import { ConcreteRequest, Mutation } from 'relay-runtime';
 export type AddTodoInput = {
-    text: string;
-    userId: string;
-    clientMutationId?: string | null;
+  clientMutationId?: string | null;
+  text: string;
+  userId: string;
 };
-export type useAddTodoMutationVariables = {
-    input: AddTodoInput;
+export type useAddTodoMutation$variables = {
+  input: AddTodoInput;
 };
-export type useAddTodoMutationResponse = {
-    readonly addTodo: {
-        readonly todoEdge: {
-            readonly __typename: string;
-            readonly cursor: string;
-            readonly node: {
-                readonly complete: boolean;
-                readonly id: string;
-                readonly text: string;
-            } | null;
-        };
-        readonly user: {
-            readonly id: string;
-            readonly totalCount: number;
-        };
-    } | null;
+export type useAddTodoMutation$data = {
+  readonly addTodo: {
+    readonly todoEdge: {
+      readonly __typename: "TodoEdge";
+      readonly cursor: string;
+      readonly node: {
+        readonly complete: boolean;
+        readonly id: string;
+        readonly text: string;
+      } | null;
+    };
+    readonly user: {
+      readonly id: string;
+      readonly totalCount: number;
+    };
+  } | null;
 };
 export type useAddTodoMutation = {
-    readonly response: useAddTodoMutationResponse;
-    readonly variables: useAddTodoMutationVariables;
+  response: useAddTodoMutation$data;
+  variables: useAddTodoMutation$variables;
 };
-
-
-
-/*
-mutation useAddTodoMutation(
-  $input: AddTodoInput!
-) {
-  addTodo(input: $input) {
-    todoEdge {
-      __typename
-      cursor
-      node {
-        complete
-        id
-        text
-      }
-    }
-    user {
-      id
-      totalCount
-    }
-  }
-}
-*/
 
 const node: ConcreteRequest = (function(){
 var v0 = [
@@ -188,5 +170,7 @@ return {
   }
 };
 })();
-(node as any).hash = '287f28139e8d7aaabd077a88fb54dec2';
+
+(node as any).hash = "287f28139e8d7aaabd077a88fb54dec2";
+
 export default node;

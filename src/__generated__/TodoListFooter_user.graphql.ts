@@ -1,31 +1,34 @@
+/**
+ * @generated SignedSource<<389535773015a5dd9945d83dad33c81b>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ReaderFragment } from "relay-runtime";
+import { Fragment, ReaderFragment } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
-export type TodoListFooter_user = {
-    readonly id: string;
-    readonly userId: string;
-    readonly completedCount: number;
-    readonly todos: {
-        readonly edges: ReadonlyArray<{
-            readonly node: {
-                readonly id: string;
-                readonly complete: boolean;
-            } | null;
-        } | null> | null;
-    } | null;
-    readonly totalCount: number;
-    readonly " $refType": "TodoListFooter_user";
+export type TodoListFooter_user$data = {
+  readonly completedCount: number;
+  readonly id: string;
+  readonly todos: {
+    readonly edges: ReadonlyArray<{
+      readonly node: {
+        readonly complete: boolean;
+        readonly id: string;
+      } | null;
+    } | null> | null;
+  } | null;
+  readonly totalCount: number;
+  readonly userId: string;
+  readonly " $fragmentType": "TodoListFooter_user";
 };
-export type TodoListFooter_user$data = TodoListFooter_user;
 export type TodoListFooter_user$key = {
-    readonly " $data"?: TodoListFooter_user$data;
-    readonly " $fragmentRefs": FragmentRefs<"TodoListFooter_user">;
+  readonly " $data"?: TodoListFooter_user$data;
+  readonly " $fragmentSpreads": FragmentRefs<"TodoListFooter_user">;
 };
-
-
 
 const node: ReaderFragment = (function(){
 var v0 = {
@@ -159,5 +162,7 @@ return {
   "abstractKey": null
 };
 })();
-(node as any).hash = '3225adf0f3b5d0a46ee4c63c8dbd9b08';
+
+(node as any).hash = "3225adf0f3b5d0a46ee4c63c8dbd9b08";
+
 export default node;

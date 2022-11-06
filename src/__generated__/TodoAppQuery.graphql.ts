@@ -1,95 +1,29 @@
+/**
+ * @generated SignedSource<<fda0668ab9c155af04ecab727417d987>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ConcreteRequest } from "relay-runtime";
+import { ConcreteRequest, Query } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
-export type TodoAppQueryVariables = {
-    userId: string;
+export type TodoAppQuery$variables = {
+  userId: string;
 };
-export type TodoAppQueryResponse = {
-    readonly user: {
-        readonly id: string;
-        readonly totalCount: number;
-        readonly " $fragmentRefs": FragmentRefs<"TodoListFooter_user" | "TodoList_user">;
-    } | null;
+export type TodoAppQuery$data = {
+  readonly user: {
+    readonly id: string;
+    readonly totalCount: number;
+    readonly " $fragmentSpreads": FragmentRefs<"TodoListFooter_user" | "TodoList_user">;
+  } | null;
 };
 export type TodoAppQuery = {
-    readonly response: TodoAppQueryResponse;
-    readonly variables: TodoAppQueryVariables;
+  response: TodoAppQuery$data;
+  variables: TodoAppQuery$variables;
 };
-
-
-
-/*
-query TodoAppQuery(
-  $userId: String!
-) {
-  user(id: $userId) {
-    id
-    totalCount
-    ...TodoListFooter_user
-    ...TodoList_user
-  }
-}
-
-fragment TodoListFooter_user on User {
-  id
-  userId
-  completedCount
-  todos(first: 2147483647) {
-    edges {
-      node {
-        id
-        complete
-        __typename
-      }
-      cursor
-    }
-    pageInfo {
-      endCursor
-      hasNextPage
-    }
-  }
-  totalCount
-}
-
-fragment TodoList_user on User {
-  todos(first: 2147483647) {
-    edges {
-      node {
-        id
-        complete
-        ...Todo_todo
-        __typename
-      }
-      cursor
-    }
-    pageInfo {
-      endCursor
-      hasNextPage
-    }
-  }
-  id
-  userId
-  totalCount
-  completedCount
-  ...Todo_user
-}
-
-fragment Todo_todo on Todo {
-  complete
-  id
-  text
-}
-
-fragment Todo_user on User {
-  id
-  userId
-  totalCount
-  completedCount
-}
-*/
 
 const node: ConcreteRequest = (function(){
 var v0 = [
@@ -302,5 +236,7 @@ return {
   }
 };
 })();
-(node as any).hash = '4485a7b9397e8720f71fb6154d2fcefc';
+
+(node as any).hash = "4485a7b9397e8720f71fb6154d2fcefc";
+
 export default node;

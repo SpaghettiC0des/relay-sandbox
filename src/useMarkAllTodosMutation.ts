@@ -1,7 +1,7 @@
 import { useMutation } from "react-relay";
 import { useCallback } from "react";
 import {
-  useMarkAllTodosMutationResponse,
+  useMarkAllTodosMutation$data,
   MarkAllTodosInput
 } from "./__generated__/useMarkAllTodosMutation.graphql";
 
@@ -31,7 +31,7 @@ interface MutationData {
 
 function getOptimisticResponse(
   mutationData: MutationData
-): useMarkAllTodosMutationResponse {
+): useMarkAllTodosMutation$data {
   const { complete, todoIds, userId, totalCount } = mutationData;
   const changedTodos = todoIds
     .filter((todoId): todoId is NonNullable<string> => todoId != null)

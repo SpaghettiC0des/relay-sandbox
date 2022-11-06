@@ -1,23 +1,26 @@
+/**
+ * @generated SignedSource<<895d71d98e57aaa476cb86076909d629>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ReaderFragment } from "relay-runtime";
+import { Fragment, ReaderFragment } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
-export type Todo_user = {
-    readonly id: string;
-    readonly userId: string;
-    readonly totalCount: number;
-    readonly completedCount: number;
-    readonly " $refType": "Todo_user";
+export type Todo_user$data = {
+  readonly completedCount: number;
+  readonly id: string;
+  readonly totalCount: number;
+  readonly userId: string;
+  readonly " $fragmentType": "Todo_user";
 };
-export type Todo_user$data = Todo_user;
 export type Todo_user$key = {
-    readonly " $data"?: Todo_user$data;
-    readonly " $fragmentRefs": FragmentRefs<"Todo_user">;
+  readonly " $data"?: Todo_user$data;
+  readonly " $fragmentSpreads": FragmentRefs<"Todo_user">;
 };
-
-
 
 const node: ReaderFragment = {
   "argumentDefinitions": [],
@@ -57,5 +60,7 @@ const node: ReaderFragment = {
   "type": "User",
   "abstractKey": null
 };
-(node as any).hash = '7d4a99e73771e30c8a0ba7cb397430e3';
+
+(node as any).hash = "7d4a99e73771e30c8a0ba7cb397430e3";
+
 export default node;

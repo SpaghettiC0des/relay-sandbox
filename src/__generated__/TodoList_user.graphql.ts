@@ -1,33 +1,36 @@
+/**
+ * @generated SignedSource<<c16f9920c748c6f01fc9f9c5601dc2db>>
+ * @lightSyntaxTransform
+ * @nogrep
+ */
+
 /* tslint:disable */
 /* eslint-disable */
 // @ts-nocheck
 
-import { ReaderFragment } from "relay-runtime";
+import { Fragment, ReaderFragment } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
-export type TodoList_user = {
-    readonly todos: {
-        readonly edges: ReadonlyArray<{
-            readonly node: {
-                readonly id: string;
-                readonly complete: boolean;
-                readonly " $fragmentRefs": FragmentRefs<"Todo_todo">;
-            } | null;
-        } | null> | null;
-    } | null;
-    readonly id: string;
-    readonly userId: string;
-    readonly totalCount: number;
-    readonly completedCount: number;
-    readonly " $fragmentRefs": FragmentRefs<"Todo_user">;
-    readonly " $refType": "TodoList_user";
+export type TodoList_user$data = {
+  readonly completedCount: number;
+  readonly id: string;
+  readonly todos: {
+    readonly edges: ReadonlyArray<{
+      readonly node: {
+        readonly complete: boolean;
+        readonly id: string;
+        readonly " $fragmentSpreads": FragmentRefs<"Todo_todo">;
+      } | null;
+    } | null> | null;
+  } | null;
+  readonly totalCount: number;
+  readonly userId: string;
+  readonly " $fragmentSpreads": FragmentRefs<"Todo_user">;
+  readonly " $fragmentType": "TodoList_user";
 };
-export type TodoList_user$data = TodoList_user;
 export type TodoList_user$key = {
-    readonly " $data"?: TodoList_user$data;
-    readonly " $fragmentRefs": FragmentRefs<"TodoList_user">;
+  readonly " $data"?: TodoList_user$data;
+  readonly " $fragmentSpreads": FragmentRefs<"TodoList_user">;
 };
-
-
 
 const node: ReaderFragment = (function(){
 var v0 = {
@@ -87,16 +90,16 @@ return {
                   "storageKey": null
                 },
                 {
+                  "args": null,
+                  "kind": "FragmentSpread",
+                  "name": "Todo_todo"
+                },
+                {
                   "alias": null,
                   "args": null,
                   "kind": "ScalarField",
                   "name": "__typename",
                   "storageKey": null
-                },
-                {
-                  "args": null,
-                  "kind": "FragmentSpread",
-                  "name": "Todo_todo"
                 }
               ],
               "storageKey": null
@@ -171,5 +174,7 @@ return {
   "abstractKey": null
 };
 })();
-(node as any).hash = '4c169798c328a2b4d9b4ae5227d016bb';
+
+(node as any).hash = "4c169798c328a2b4d9b4ae5227d016bb";
+
 export default node;
