@@ -9,7 +9,6 @@ type Query {
 }
 
 type User implements Node {
-  """The ID of an object"""
   id: ID!
   userId: String!
   todos(status: String = "any", after: String, first: Int, before: String, last: Int): TodoConnection
